@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <FaBars
+        onClick={() => setShowSidebar(!showSidebar)}
+        className="bar-icon"
+      />
+      {showSidebar && <Sidebar />}
+      <button className="btn">Show Modal</button>
+    </main>
   );
 }
 
