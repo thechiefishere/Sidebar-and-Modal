@@ -14,11 +14,11 @@ import { GrDocumentText } from "react-icons/gr";
 const Sidebar = ({ barClicked }) => {
   return (
     <div className="sidebar">
-      <header>
+      <header className="header">
         <h1 className="title">
           Coding <span>Addict</span>
         </h1>
-        <FaTimes onClick={barClicked} />
+        <FaTimes className="times" onClick={barClicked} />
       </header>
       <nav>
         <ul>

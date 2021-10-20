@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #eef1f1;
+  position: relative;
 }
+
+.times,
+.bars {
+  font-size: 1.8rem;
+  color: red;
+}
+
+.bars {
+  color: #54c8eb;
+}
+
+.main .bars {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.main .sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px #eee;
+  z-index: 5;
+}
+.main .sidebar .header {
+  display: flex;
+  justify-content: space-between;
+}
+.main .sidebar .header .times {
+  align-self: center;
+}
+.main .sidebar .header span {
+  color: #54c8eb;
+}
+.main .sidebar nav {
+  font-size: 1.5rem;
+  margin-top: 2vh;
+}
+.main .sidebar nav ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.main .sidebar nav ul li {
+  margin-bottom: 30px;
+}
+.main .sidebar .social-icons {
+  margin-top: 33vh;
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 140px;
+  color: #54c8eb;
+}
+.main .btn {
+  position: absolute;
+  top: 42vh;
+  left: 45%;
+  z-index: -1;
+  background-color: #54c8eb;
+  padding: 8px 15px;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+}
+.main .modal {
+  position: absolute;
+  top: 30vh;
+  height: 25vh;
+  width: 70%;
+  left: 15%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .modal .times {
+  justify-self: flex-end;
+  display: block;
+}
+.main .modal .content {
+  width: 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+@media (min-width: 675px) {
+  .main .sidebar {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

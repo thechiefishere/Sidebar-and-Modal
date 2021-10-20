@@ -16,12 +16,14 @@ function App() {
   };
 
   return (
-    <main>
-      <FaBars onClick={barClicked} className="bar-icon" />
+    <main className="main">
+      {!showSidebar && <FaBars onClick={barClicked} className="bars" />}
       {showSidebar && <Sidebar barClicked={barClicked} />}
-      <button onClick={btnClicked} className="btn">
-        Show Modal
-      </button>
+      {!showModal && (
+        <button onClick={btnClicked} className="btn">
+          Show Modal
+        </button>
+      )}
       {showModal && <Modal btnClicked={btnClicked} />}
     </main>
   );
