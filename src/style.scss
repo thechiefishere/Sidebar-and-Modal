@@ -26,9 +26,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    padding: 10px;
     height: 100vh;
-    width: 100%;
+
+    width: 0px;
+    overflow: hidden;
+    transition: 0.4s ease-out;
+
     position: absolute;
     top: 0px;
     left: 0px;
@@ -39,6 +42,7 @@ body {
     .header {
       display: flex;
       justify-content: space-between;
+      margin: 0px 8px;
       .times {
         align-self: center;
       }
@@ -48,7 +52,7 @@ body {
     }
     nav {
       font-size: 1.5rem;
-      margin-top: 2vh;
+      margin: 2vh 8px;
       ul {
         list-style: none;
         padding-left: 0px;
@@ -66,6 +70,9 @@ body {
       padding: 0 140px;
       color: $primary-color;
     }
+  }
+  .show-sidebar {
+    width: 100%;
   }
   .btn {
     position: absolute;
@@ -102,6 +109,9 @@ body {
 @media (min-width: 675px) {
   .main {
     .sidebar {
+      width: 0px;
+    }
+    .show-sidebar {
       width: 400px;
     }
   }

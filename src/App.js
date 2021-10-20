@@ -6,9 +6,11 @@ import Modal from "./components/Modal";
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [show, setShow] = useState(false);
 
   const barClicked = () => {
     setShowSidebar(!showSidebar);
+    setShow(!show);
   };
 
   const btnClicked = () => {
@@ -18,7 +20,7 @@ function App() {
   return (
     <main className="main">
       {!showSidebar && <FaBars onClick={barClicked} className="bars" />}
-      {showSidebar && <Sidebar barClicked={barClicked} />}
+      <Sidebar barClicked={barClicked} show={show} />
       {!showModal && (
         <button onClick={btnClicked} className="btn">
           Show Modal

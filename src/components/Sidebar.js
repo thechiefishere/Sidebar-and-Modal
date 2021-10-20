@@ -11,9 +11,9 @@ import {
 import { BsFillPeopleFill } from "react-icons/bs";
 import { GrDocumentText } from "react-icons/gr";
 
-const Sidebar = ({ barClicked }) => {
+const Sidebar = ({ barClicked, show }) => {
   return (
-    <div className="sidebar">
+    <div className={show ? "sidebar show-sidebar" : "sidebar"}>
       <header className="header">
         <h1 className="title">
           Coding <span>Addict</span>
