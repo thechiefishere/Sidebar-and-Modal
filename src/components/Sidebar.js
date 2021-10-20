@@ -11,14 +11,14 @@ import {
 import { BsFillPeopleFill } from "react-icons/bs";
 import { GrDocumentText } from "react-icons/gr";
 
-const Sidebar = () => {
+const Sidebar = ({ barClicked }) => {
   return (
     <div className="sidebar">
       <header>
         <h1 className="title">
           Coding <span>Addict</span>
         </h1>
-        <FaTimes />
+        <FaTimes onClick={barClicked} />
       </header>
       <nav>
         <ul>
